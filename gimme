@@ -893,7 +893,7 @@ arm64)
 		exit 1
 	fi
 	if [[ "${GIMME_HOSTOS}" == "linux" && "${GIMME_HOSTARCH}" != "${GIMME_ARCH}" ]]; then
-		: "${GIMME_CC_FOR_TARGET:="arm-linux-gnueabi-gcc"}"
+		: "${GIMME_CC_FOR_TARGET:="arm-none-eabi-gcc"}"
 	fi
 	;;
 arm*) GIMME_ARCH=arm ;;
