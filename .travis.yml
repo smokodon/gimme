@@ -31,6 +31,7 @@ matrix:
         - gcc-arm-linux-gnueabi
         - libc6-dev-arm64-cross
         - binutils-arm-linux-gnueabi
+        - arm-linux-gnueabi-binutils
   - env:
       TARGET: "arm"
       GO_VERSIONS: "master"
@@ -41,6 +42,7 @@ matrix:
           - gcc-arm-linux-gnueabi
           - libc6-dev-arm64-cross
           - binutils-arm-linux-gnueabi
+          - arm-linux-gnueabi-binutils
   - env:
       TARGET: "arm64"
       GO_VERSIONS: "$(sed -n -e '/^[^#]/p' < .testdata/sample-binary-$UNAME) master"
@@ -52,6 +54,7 @@ matrix:
           - gcc-arm-linux-gnueabi
           - libc6-dev-arm64-cross
           - binutils-arm-linux-gnueabi
+          - arm-linux-gnueabi-binutils
 before_script:
 - mkdir -p "${GIMME_TMP}"
 script:
