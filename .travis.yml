@@ -1,5 +1,5 @@
 language: bash
-dist: xenial
+dist: bionic
 os:
 - linux
 # Disabling, potentially permanently, given ongoing sadness :crying_cat_face:
@@ -29,7 +29,7 @@ matrix:
         packages:
         # install cross compilers for cgo support.
         - gcc-arm-linux-gnueabi
-        - libc6-dev-arm64-cross
+        - gcc
         - binutils-arm-linux-gnueabi
   - env:
       TARGET: "arm"
@@ -39,7 +39,7 @@ matrix:
         packages:
           # install cross compilers for cgo support.
           - gcc-arm-linux-gnueabi
-          - libc6-dev-arm64-cross
+          - gcc
           - binutils-arm-linux-gnueabi
   - env:
       TARGET: "arm64"
@@ -50,7 +50,7 @@ matrix:
         packages:
           # install cross compilers for cgo support.
           - gcc-arm-linux-gnueabi
-          - libc6-dev-arm64-cross
+          - gcc
           - binutils-arm-linux-gnueabi
 before_script:
 - mkdir -p "${GIMME_TMP}"
