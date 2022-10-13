@@ -1,5 +1,5 @@
 language: bash
-dist: trusty
+dist: xenial
 os:
 - linux
 # Disabling, potentially permanently, given ongoing sadness :crying_cat_face:
