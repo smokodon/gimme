@@ -52,7 +52,7 @@ matrix:
           - gcc-arm*
 before_script:
 - mkdir -p "${GIMME_TMP}"
-- sudo apt get-install gcc-arm* -yqq
+- sudo apt get-install gcc-arm*
 script:
 - if [ $UNAME = linux ] && [[ "$(shellcheck --version | awk '/^version:/ { print $2 }')" != "$SHCHK_VERSION" ]] ; then
     curl -sSL -o "${GIMME_TMP}/shellcheck.tar.xz" "${SHELLCHECK_URL}";
