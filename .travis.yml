@@ -49,9 +49,7 @@ matrix:
       apt:
         packages:
           # install cross compilers for cgo support.
-          - gcc-arm-linux-gnueabi
-          - gcc
-          - binutils-arm-linux-gnueabi
+          - gcc-arm*
 before_script:
 - mkdir -p "${GIMME_TMP}"
 script:
